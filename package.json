@@ -7,8 +7,10 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "@vue-hero-icons/outline": "^1.7.2",
     "core-js": "^3.8.3",
     "vue": "^3.2.13",
+    "vue-multiselect": "^2.1.6",
     "vuex": "^4.0.0"
   },
   "devDependencies": {
