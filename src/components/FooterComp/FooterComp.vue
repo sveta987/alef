@@ -16,7 +16,7 @@
       <h4 class="heading">Узнайте первыми о новинках и акциях</h4>
       <div class="input-area">
         <input type="email" v-model="email" id="email" placeholder="Адрес электронной почты">
-        <label @click="email=''" for="email">X</label>
+        <label @click="email=''" for="email"><img src="../../assets/icons/x.png" alt=""></label>
       </div>
       <p v-if="incorrectEmail" class="incorrect-email">* Ваш адрес электронной почты неверен, пожалуйста, исправьте
         это</p>

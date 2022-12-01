@@ -9,11 +9,11 @@
     </div>
   </header>
   <div class="menu" v-if="isOpenMenu">
-    <button class="close-menu" @click="closeMenu">X</button>
-    <a href="#">постельное белье</a>
-    <a href="#">одежда для дома</a>
-    <a href="#">Одежда для улицы</a>
-    <a href="#">ВЫход</a>
+    <button class="close-menu" @click="closeMenu"><img src="../../assets/icons/x.png" alt=""></button>
+    <a href="#" @click="closeMenu">постельное белье</a>
+    <a href="#" @click="closeMenu">одежда для дома</a>
+    <a href="#" @click="closeMenu">Одежда для улицы</a>
+    <a href="#" @click="closeMenu">ВЫход</a>
   </div>
 </template>
 

@@ -71,6 +71,10 @@
         width: 100%;
         margin-right: 0;
     }
+    .product-description .content{
+        width: 100%;
+        padding-left: 10x;
+    }
 
     .product-description .image-section .image-select img {
         width: 50px;

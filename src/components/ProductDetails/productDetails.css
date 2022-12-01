@@ -128,14 +128,17 @@
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
-    line-height: 16px;
+    /*line-height: 16px;*/
     display: flex;
     align-items: center;
-    letter-spacing: 0.04em;
+    /*letter-spacing: 0.04em;*/
     color: #333333;
     border: 1px solid #333333;
     margin-right: 10px;
-    padding: 0 2px;
+    padding: 6px 15px;
+}
+.product-description .content .discount-section .discount p{
+    margin: 0;
 }
 
 .product-description .content .size-section {
@@ -209,14 +212,21 @@
     border: 1px solid #333333;
     padding: 8px;
 }
+.product-description .content .add-to-card-section .add-to-favorite img{
+    width: 16px;
+    height: 16px;
+}
 
 .product-description .content .add-to-card-section .add-to-favorite:hover {
     background: #FFFFFF;
     cursor: pointer;
-    padding: 6px;
-    margin: 0;
+    padding: 8px;
 }
 
+.product-description .content .add-to-card-section .add-to-favorite:hover img{
+    width: 16px;
+    height: 16px;
+}
 .product-description .content .add-to-card-section a {
     font-style: normal;
     font-weight: 400;

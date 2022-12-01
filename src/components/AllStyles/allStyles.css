@@ -70,6 +70,19 @@
     flex-direction: column;
     align-items: center;
 }
+.image-section .image-container .overlay .content .full-screen{
+    position: absolute;
+    right: 12px;
+    top: 12px;
+}
+.image-section .image-container .overlay .content .favorite{
+    position: absolute;
+    bottom: 20px;
+    left: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .image-section .image-container .overlay .content button {
     border: none;

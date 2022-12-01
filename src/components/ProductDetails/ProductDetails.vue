@@ -53,9 +53,9 @@
       <div class="add-to-card-section">
         <div class="buttons-part">
           <div class="buttons">
-            <button class="inc-dec" @click="count--" :disabled="count<=1">-</button>
-            <span class="inc-dec">{{ count }}</span>
             <button class="inc-dec" @click="count++">+</button>
+            <span class="inc-dec">{{ count }}</span>
+            <button class="inc-dec" @click="count--" :disabled="count<=1">-</button>
           </div>
           <div>
             <button class="add-to-card" @click="modalShow('card')">Добавить в корзину</button>
