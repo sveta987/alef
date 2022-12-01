@@ -1,0 +1,34 @@
+/*.....media.....*/
+@media (max-width: 1390px) {
+    .all-styles .image-section {
+        width: 100%;
+    }
+}
+
+@media (max-width: 950px) {
+    .all-styles .image-section {
+        flex-wrap: wrap;
+    }
+
+    .all-styles .image-section .left-side {
+        width: 100%;
+    }
+
+    .all-styles .image-section .right-side .row {
+        justify-content: left;
+    }
+}
+
+@media (max-width: 800px) {
+    .image-section {
+        flex-wrap: wrap;
+    }
+
+    .image-section .left-side {
+        width: 100%;
+    }
+
+    .image-section .right-side {
+        width: 100%;
+    }
+}

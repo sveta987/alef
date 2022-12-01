@@ -1,0 +1,69 @@
+footer {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+footer .box {
+    display: flex;
+    flex-direction: column;
+}
+
+footer .box .heading {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #333333;
+}
+
+footer .box .link {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.04em;
+    color: #333333;
+}
+
+footer .box .input-area {
+    border-bottom: 1px solid #C4C4C4;
+    display: flex;
+}
+
+footer .box .input-area input {
+    border: none;
+    background: none;
+    width: 100%;
+}
+
+footer .box .input-area input:focus {
+    outline: none;
+}
+
+footer .box .input-area label {
+    cursor: pointer;
+}
+
+footer .box button {
+    background: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 28px;
+    gap: 10px;
+    border: 1px solid #333333;
+    margin-left: 60%;
+    margin-top: 20px;
+    color: #333333;
+}
+
+.incorrect-email {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 20px;
+    letter-spacing: 0.04em;
+    color: red;
+}

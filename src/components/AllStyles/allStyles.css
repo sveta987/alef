@@ -1,0 +1,83 @@
+.all-styles {
+    margin-top: 20px;
+}
+
+.all-styles .all-styles-link {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.04em;
+    text-decoration-line: underline;
+    color: #333333;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.image-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 16px;
+    width: 100%;
+}
+
+.image-section .left-side {
+    width: 50%;
+}
+
+.image-section .left-side img {
+    width: 100%;
+}
+
+.image-section .right-side {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 50%;
+}
+
+.image-section .right-side .row img {
+    width: 100%;
+}
+
+.image-section .right-side .row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.image-section .image-container {
+    position: relative;
+}
+
+.image-section .image-container .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: none;
+    color: #FFF;
+    width: 100%;
+}
+
+.image-section .image-container .overlay .content {
+    margin-top: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-section .image-container .overlay .content button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.image-section .image-container:hover .overlay {
+    display: block;
+    background: rgba(0, 0, 0, .6);
+}

@@ -3,16 +3,15 @@
     <div class="image-section">
       <img :src="`/images/${currentImage}.png`" class="main-image">
       <div class="image-select">
-        <div v-for="(image, index) in images" @click="changeMainImage(index)" >
-          <div v-show=" images[index] !==currentImage"  class="overlay"></div>
-          <img :src="`/images/${image}.png`" >
+        <div v-for="(image, index) in images" @click="changeMainImage(index)">
+          <div v-show=" images[index] !==currentImage" class="overlay"></div>
+          <img :src="`/images/${image}.png`">
         </div>
       </div>
-
     </div>
     <div class="content">
       <div class="description-section">
-        <h3 class="heading">Пижама для девочек</h3>
+        <h3 class="heading">{{ productName }}</h3>
         <p class="code">Арт. 02765/46</p>
         <div class="reviews">
           <p class="review">Отзывы</p>
@@ -26,7 +25,7 @@
           </div>
           <p class="review">14 отзывов </p>
           <button class="arrow">
-            <img  src="../../assets/icons/arrow.png">
+            <img src="../../assets/icons/arrow.png">
           </button>
         </div>
       </div>
@@ -44,10 +43,10 @@
       </div>
       <div class="size-section">
         <select name="sizes" id="sizes" v-model="size">
-          <option value=""> Выбрать размер </option>
-          <option value="s"> S </option>
-          <option value="m"> M </option>
-          <option value="l"> L </option>
+          <option value=""> Выбрать размер</option>
+          <option value="s"> S</option>
+          <option value="m"> M</option>
+          <option value="l"> L</option>
         </select>
         <a href="#">Определить размер</a>
       </div>
@@ -58,11 +57,14 @@
             <span class="inc-dec">{{ count }}</span>
             <button class="inc-dec" @click="count++">+</button>
           </div>
-          <button class="add-to-card">Добавить в корзину</button>
-          <button class="add-to-favorite" @mouseenter="isHoverFavorite = !isHoverFavorite" @mouseleave="isHoverFavorite = !isHoverFavorite">
-            <img v-if="isHoverFavorite" src="../../assets/icons/favorite.svg" alt="">
-            <img v-else src="../../assets/icons/white-heart.png" alt="">
-          </button>
+          <div>
+            <button class="add-to-card" @click="modalShow('card')">Добавить в корзину</button>
+            <button class="add-to-favorite" @mouseenter="isHoverFavorite = !isHoverFavorite"
+                    @mouseleave="isHoverFavorite = !isHoverFavorite" @click="modalShow('favorite')">
+              <img v-if="isHoverFavorite" src="../../assets/icons/favorite.svg" alt="">
+              <img v-else src="../../assets/icons/white-heart.png" alt="">
+            </button>
+          </div>
         </div>
         <a href="#">Купить в 1 клик</a>
       </div>
@@ -77,44 +79,57 @@
         <div class="link">
           <img src="../../assets/icons/clock.png">
           <a href="#">
-           Доставка и возврат
+            Доставка и возврат
           </a>
         </div>
         <div class="link">
           <img src="../../assets/icons/wallet.png">
           <a href="#">
-           Способы оплат
+            Способы оплат
           </a>
         </div>
       </div>
     </div>
   </div>
-
+  <modal v-if="showModal" @close="showModal = false">
+    <template #header><p>Товар {{ productName }} в количестве {{ count }} единиц добавлен в <span
+      v-if="modalFor==='card'">корзину</span> <span v-else>избранное</span></p></template>
+  </modal>
 </template>
-
 <script>
+import Modal from "@/components/Modal/Modal";
+
 export default {
   name: "ProductDetails",
-  data(){
-    return{
-      images:['s-1', 's-2','s-3','s-4','s-5'],
+  components: {Modal},
+  data() {
+    return {
+      images: ['s-1', 's-2', 's-3', 's-4', 's-5'],
+      productName: null,
       currentImage: null,
       ratings: [1, 2, 3, 4, 5],
       rate_value: null,
-      size:'',
-      count:1,
-      isHoverFavorite: false
+      size: '',
+      count: 1,
+      isHoverFavorite: false,
+      showModal: false,
+      modalFor: null,
     }
   },
-  methods:{
-    changeMainImage(index){
+  methods: {
+    changeMainImage(index) {
       this.currentImage = this.images[index];
     },
+    modalShow(value) {
+      this.showModal = true;
+      this.modalFor = value;
+    }
   },
   mounted() {
     this.currentImage = this.images[0];
+    this.productName = 'Пижама для девочек';
   }
 }
 </script>
-
 <style src="./productDetails.css"></style>
+<style src="./productDetailsMedia.css"></style>
